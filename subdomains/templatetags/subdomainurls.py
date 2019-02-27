@@ -1,3 +1,4 @@
+import pdb
 from django.template import Library
 
 from subdomains.utils import reverse
@@ -31,6 +32,7 @@ def url(context, view, subdomain=UNSET, *args, **kwargs):
        template rendering.
 
     """
+    pdb.set_trace()
     if subdomain is UNSET:
         request = context.get('request')
         if request is not None:
