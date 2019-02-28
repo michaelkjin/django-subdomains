@@ -1,3 +1,4 @@
+import pdb
 import operator
 import logging
 import re
@@ -29,6 +30,7 @@ class SubdomainMiddleware:
         """
         Adds a ``subdomain`` attribute to the ``request`` parameter.
         """
+        pdb.set_trace()
         domain, host = map(lower, (get_domain(), request.get_host()))
 
         pattern = r'^(?:(?P<subdomain>.*?)\.)?%s(?::.*)?$' % re.escape(domain)
